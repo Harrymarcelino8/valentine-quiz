@@ -1,4 +1,5 @@
 const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
 
 let activated = false;
 
@@ -26,4 +27,9 @@ noBtn.addEventListener("mouseenter", () => {
 // Safety: even if clicked somehow
 noBtn.addEventListener("click", (e) => {
   e.preventDefault();
+});
+
+// ✅ THIS IS THE MISSING PART
+yesBtn.addEventListener("click", () => {
+  window.location.href = "yes.html";
 });
