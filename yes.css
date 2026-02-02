@@ -55,3 +55,17 @@ p {
   font-weight: bold;
 }
 
+.invite-btn {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff4d6d;
+  text-decoration: none;
+}
+
+.invite-btn:hover {
+  text-decoration: underline;
+}
+
+
