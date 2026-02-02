@@ -4,12 +4,12 @@ const yesBtn = document.getElementById("yesBtn");
 let activated = false;
 
 noBtn.addEventListener("mouseenter", () => {
-  // On first hover, detach from layout
   if (!activated) {
     const rect = noBtn.getBoundingClientRect();
     noBtn.style.position = "fixed";
     noBtn.style.left = rect.left + "px";
     noBtn.style.top = rect.top + "px";
+    noBtn.style.pointerEvents = "none"; // 🔥 key fix
     activated = true;
   }
 
@@ -24,13 +24,6 @@ noBtn.addEventListener("mouseenter", () => {
   noBtn.style.top = randomY + "px";
 });
 
-// Safety: even if clicked somehow
-noBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
-// ✅ THIS IS THE MISSING PART
 yesBtn.addEventListener("click", () => {
-  alert("YES CLICKED");
+  window.location.href = "yes.html";
 });
-
