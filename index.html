@@ -1,21 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Valentine 💖</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6ee;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  <div class="container">
-    <h1>Will you be my Valentine? 💘</h1>
+.container {
+  background: white;
+  padding: 40px;
+  max-width: 420px;
+  margin: 150px auto;
+  border-radius: 12px;
+}
 
-    <div class="button-row">
-      <button id="yesBtn">Yes 💕</button>
-      <button id="noBtn">No 😢</button>
-    </div>
-  </div>
+.button-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+/* NO button starts normal */
+#noBtn {
+  background-color: #ccc;
+}
