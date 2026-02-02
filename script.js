@@ -9,7 +9,6 @@ noBtn.addEventListener("mouseenter", () => {
     noBtn.style.position = "fixed";
     noBtn.style.left = rect.left + "px";
     noBtn.style.top = rect.top + "px";
-    noBtn.style.pointerEvents = "none"; // 🔥 key fix
     activated = true;
   }
 
@@ -24,6 +23,12 @@ noBtn.addEventListener("mouseenter", () => {
   noBtn.style.top = randomY + "px";
 });
 
+// Safety: prevent accidental click
+noBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
+// ✅ GitHub Pages–safe navigation
 yesBtn.addEventListener("click", () => {
-  window.location.href = "yes.html";
+  window.location.href = "./yes.html";
 });
