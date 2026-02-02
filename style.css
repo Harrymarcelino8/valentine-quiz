@@ -2,6 +2,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffe6ee;
   text-align: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -10,13 +12,6 @@ body {
   max-width: 420px;
   margin: 150px auto;
   border-radius: 12px;
-}
-
-.button-wrapper {
-  position: relative;
-  width: 320px;
-  height: 140px;
-  margin: 40px auto 0;
 }
 
 button {
@@ -30,14 +25,13 @@ button {
 #yesBtn {
   background-color: #ff4d6d;
   color: white;
-  position: absolute;
-  left: 0;
-  top: 50px;
+  margin-top: 20px;
 }
 
+/* NO BUTTON IS COMPLETELY FREE */
 #noBtn {
   background-color: #ccc;
-  position: absolute;
-  left: 200px;
-  top: 50px;
+  position: fixed;
+  top: 60%;
+  left: 55%;
 }
