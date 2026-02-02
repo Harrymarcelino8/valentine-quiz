@@ -1,8 +1,18 @@
 const noBtn = document.getElementById("noBtn");
 
-noBtn.addEventListener("mouseenter", () => {
-  const padding = 20;
+let activated = false;
 
+noBtn.addEventListener("mouseenter", () => {
+  // On first hover, detach from layout
+  if (!activated) {
+    const rect = noBtn.getBoundingClientRect();
+    noBtn.style.position = "fixed";
+    noBtn.style.left = rect.left + "px";
+    noBtn.style.top = rect.top + "px";
+    activated = true;
+  }
+
+  const padding = 20;
   const maxX = window.innerWidth - noBtn.offsetWidth - padding;
   const maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
@@ -13,7 +23,7 @@ noBtn.addEventListener("mouseenter", () => {
   noBtn.style.top = randomY + "px";
 });
 
-// Extra safety: prevent clicking
+// Safety: even if clicked somehow
 noBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
