@@ -6,24 +6,37 @@ body {
 
 .container {
   background: white;
-  padding: 30px;
+  padding: 40px;
   max-width: 400px;
-  margin: 100px auto;
+  margin: 150px auto;
   border-radius: 12px;
+  position: relative;
+}
+
+.button-wrapper {
+  margin-top: 30px;
+  position: relative;
+  height: 120px;
 }
 
 button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #ff4d6d;
-  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #e63950;
+#yesBtn {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#noBtn {
+  background-color: #ccc;
+  position: absolute;
+}
+
+.hidden {
+  display: none;
 }
