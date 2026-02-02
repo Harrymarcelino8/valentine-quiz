@@ -1,56 +1,25 @@
-const quiz = [
-  {
-    question: "What is my favorite way to spend time together?",
-    answers: [
-      "Watching movies",
-      "Eating together",
-      "Traveling",
-      "All of the above ❤️"
-    ],
-    correct: 3
-  },
-  {
-    question: "Will you be my Valentine?",
-    answers: [
-      "Yes 💕",
-      "Of course 💖",
-      "Absolutely 😘"
-    ],
-    correct: 0
-  }
-];
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
 
-let currentQuestion = 0;
+const page1 = document.getElementById("page1");
+const page2 = document.getElementById("page2");
 
-const questionEl = document.getElementById("question");
-const answersEl = document.getElementById("answers");
-const resultEl = document.getElementById("result");
+// Make the "No" button dodge the cursor
+noBtn.addEventListener("mouseover", () => {
+  const wrapper = document.querySelector(".button-wrapper");
 
-function showQuestion() {
-  resultEl.textContent = "";
-  answersEl.innerHTML = "";
-  questionEl.textContent = quiz[currentQuestion].question;
+  const maxX = wrapper.offsetWidth - noBtn.offsetWidth;
+  const maxY = wrapper.offsetHeight - noBtn.offsetHeight;
 
-  quiz[currentQuestion].answers.forEach((answer, index) => {
-    const btn = document.createElement("button");
-    btn.textContent = answer;
-    btn.onclick = () => checkAnswer(index);
-    answersEl.appendChild(btn);
-  });
-}
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-function checkAnswer(index) {
-  if (index === quiz[currentQuestion].correct) {
-    currentQuestion++;
-    if (currentQuestion < quiz.length) {
-      showQuestion();
-    } else {
-      questionEl.textContent = "Happy Valentine’s Day! 💝";
-      answersEl.innerHTML = "";
-    }
-  } else {
-    resultEl.textContent = "Try again 😜";
-  }
-}
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+});
 
-showQuestion();
+// When "Yes" is clicked, go to page 2
+yesBtn.addEventListener("click", () => {
+  page1.classList.add("hidden");
+  page2.classList.remove("hidden");
+});
