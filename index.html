@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine Quiz 💖</title>
+  <title>Valentine 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Valentine Quiz 💘</h1>
-    <p id="question"></p>
-    <div id="answers"></div>
-    <p id="result"></p>
+  <div class="container" id="page1">
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <div class="button-wrapper">
+      <button id="yesBtn">Yes 💕</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="page2">
+    <h1>You said YES 💖</h1>
+    <p>(Second page content coming soon)</p>
   </div>
 
   <script src="script.js" defer></script>
