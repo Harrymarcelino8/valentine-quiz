@@ -14,6 +14,13 @@ body {
   border-radius: 12px;
 }
 
+.button-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
 button {
   padding: 12px 25px;
   font-size: 16px;
@@ -25,13 +32,9 @@ button {
 #yesBtn {
   background-color: #ff4d6d;
   color: white;
-  margin-top: 20px;
 }
 
-/* NO BUTTON IS COMPLETELY FREE */
+/* NO button starts normal */
 #noBtn {
   background-color: #ccc;
-  position: fixed;
-  top: 60%;
-  left: 55%;
 }
