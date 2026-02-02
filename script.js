@@ -31,5 +31,6 @@ noBtn.addEventListener("click", (e) => {
 
 // ✅ THIS IS THE MISSING PART
 yesBtn.addEventListener("click", () => {
-  window.location.href = "yes.html";
+  alert("YES CLICKED");
 });
+
