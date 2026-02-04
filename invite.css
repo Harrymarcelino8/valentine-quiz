@@ -41,3 +41,33 @@ h1 {
 .closing {
   margin-top: 40px;
 }
+
+.justify {
+  text-align: justify;
+}
+
+.details {
+  margin: 30px 0;
+  font-size: 18px;
+}
+
+.details .row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.details .label {
+  width: 110px;
+  font-weight: bold;
+}
+
+.details .colon {
+  width: 10px;
+  text-align: center;
+}
+
+.details .value {
+  flex: 1;
+}
+
